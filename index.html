@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV — Dumitru-Ionut Popescu</title>
+<style>
+:root{
+  --bg:#0b0f14; --card:#121923; --ink:#e6eef8; --muted:#9fb4cc;
+  --accent:#0A84FF; --line:#213046;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,Segoe UI,Arial,sans-serif;padding:28px}
+.main{
+  max-width:980px;margin:auto;background:var(--card);border:1px solid var(--line);
+  border-radius:16px; box-shadow:0 14px 40px rgba(0,0,0,.35); overflow:hidden;
+}
+/* Header */
+.header{
+  display:flex;gap:22px;align-items:center;padding:26px 28px;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#0f1622 0%,#101724 62%,#121923 100%);
+}
+.photo{width:124px;height:124px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);background:#000}
+.title h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px}
+.title .tag{margin:0;color:var(--muted)}
+.title .meta{margin:6px 0 0}
+.title a{color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--muted)}
+.title a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* Body grid */
+.grid{display:grid;grid-template-columns:320px 1fr;gap:22px;padding:22px 28px 30px}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:transparent}
+.card h3{margin:0 0 10px;color:var(--accent);font-weight:700}
+.small{color:var(--muted);font-size:13.5px}
+.badge{display:inline-block;border:1px solid var(--accent);color:var(--accent);
+  background:rgba(10,132,255,.08);padding:6px 10px;border-radius:999px;
+  font-size:12px;margin:4px 6px 0 0}
+.list{margin:6px 0 0 18px}.list li{margin:6px 0}
+.meta{color:var(--muted);font-size:13px}
+.footer{padding:12px 28px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+
+/* Skills 4-colonnes (droite, bas) */
+.skills4{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.skill-box{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.skill-box h4{margin:0 0 6px;color:var(--ink);font-size:14px}
+.skill-box ul{margin:0 0 0 16px;padding:0}
+.skill-box li{margin:4px 0}
+
+/* Social + QR */
+.social{display:grid;grid-template-columns:1fr;gap:12px}
+.qr-row{display:flex;gap:12px;align-items:center}
+.qr-row img{width:64px;height:64px;border-radius:8px;border:1px solid var(--line)}
+.qr-row .brand{display:flex;flex-direction:column}
+.qr-row .brand .name{font-weight:600}
+.qr-row .brand a{color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--muted);font-size:13.5px}
+.qr-row .brand a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* Responsive / Print */
+@media (max-width:860px){ body{padding:14px} .grid{grid-template-columns:1fr} .header{flex-direction:column;align-items:flex-start} }
+@media print{
+  body{padding:0;background:white}
+  .main{box-shadow:none;border:none;border-radius:0}
+  .header{border-bottom:1px solid #ddd}
+  a{color:#000;text-decoration:none;border-bottom:none}
+}
+</style>
+</head>
+<body>
+<main class="main">
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="photo.png" alt="Portrait" class="photo">
+    <div class="title">
+      <h1>Dumitru-Ionut Popescu</h1>
+      <p class="tag">AI & Automation Engineer (Candidat Mastère RNCP7) • Python • API • Agents • Automation</p>
+      <p class="meta">
+        📍 Castres (81100) • 📞 <a href="tel:+33753521016">07&nbsp;53&nbsp;52&nbsp;10&nbsp;16</a> •
+        ✉️ <a href="mailto:giovaninho22@yahoo.com">giovaninho22@yahoo.com</a>
+      </p>
+    </div>
+  </header>
+
+  <section class="grid">
+
+    <!-- COLONNE GAUCHE -->
+    <aside>
+      <article class="card">
+        <h3>À propos</h3>
+        <p class="small">
+          Professionnel du digital en transition vers l’IA appliquée. Objectif : devenir AI & Automation Engineer (RNCP7),
+          spécialisé en assistants IA, intégrations d’API et automatisations de processus.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Compétences techniques </h3>
+        <div>
+          <span class="badge">Python (en montée)</span>
+          <span class="badge">Automatisation IA</span>
+          <span class="badge">APIs & Webhooks</span>
+          <span class="badge">HTML/CSS/JS</span>
+          <span class="badge">PHP</span>
+          <span class="badge">WordPress</span>
+          <span class="badge">UI/UX</span>
+          <span class="badge">SEO</span>
+          <span class="badge">Adobe Suite</span>
+          <span class="badge">Maintenance IT</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Langues</h3>
+        <p class="small">🇫🇷 Français (C1) • 🇬🇧 Anglais (B2) • 🇷🇴 Roumain (C2) • 🇮🇹 Italien (B1) • 🇬🇷 Grec (B1)</p>
+      </article>
+
+      <article class="card">
+        <h3>Profils & accès</h3>
+        <div class="social">
+
+          <div class="qr-row">
+            <img alt="QR LinkedIn"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fioan-popescu-a41b1b177%2F">
+            <div class="brand">
+              <div class="name">LinkedIn</div>
+              <a target="_blank" href="https://www.linkedin.com/in/ioan-popescu-a41b1b177/">linkedin.com/in/ioan-popescu-a41b1b177</a>
+            </div>
+          </div>
+
+          <div class="qr-row">
+            <img alt="QR GitHub"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fgithub.com%2Fandaioseb22">
+            <div class="brand">
+              <div class="name">GitHub</div>
+              <a target="_blank" href="https://github.com/andaioseb22">github.com/andaioseb22</a>
+            </div>
+          </div>
+
+          <div class="qr-row">
+            <img alt="QR Instagram"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.instagram.com%2Fandaioseb22%2F">
+            <div class="brand">
+              <div class="name">Instagram</div>
+              <a target="_blank" href="https://www.instagram.com/andaioseb22/">@andaioseb22</a>
+            </div>
+          </div>
+
+          <div class="qr-row">
+            <img alt="QR Facebook"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Ffacebook.com%2F">
+            <div class="brand">
+              <div class="name">Facebook</div>
+              <a target="_blank" href="https://www.facebook.com/dumitru.popescu.3114">facebook.com</a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Données personnelles</h3>
+        <ul class="list small">
+          <li>📍 Adresse : 16 rue Docteur Schweitzer, 81100 Castres</li>
+          <li>📞 Tél. : 07 53 52 10 16</li>
+          <li>✉️ E-mail : giovaninho22@yahoo.com</li>
+          <li>🎂 Naissance : 26-11-1982</li>
+          <li>⚥ Sexe : Homme</li>
+          <li>🏳️ Nationalité : Française</li>
+          <li>💍 État civil : Marié</li>
+          <li>🚘 Permis : B, C</li>
+          <li>🎧 Loisirs : lecture, natation, cyclisme</li>
+        </ul>
+      </article>
+    </aside>
+
+    <!-- COLONNE DROITE -->
+    <section>
+      <article class="card">
+        <h3>🎯 Objectif</h3>
+        <p>
+          Intégrer un Mastère Expert en Intelligence Artificielle (RNCP 7) afin de devenir Développeur IA / Python
+          spécialisé en automatisation, intégration API et agents IA.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>💼 Expérience professionnelle</h3>
+
+        <p><strong>Fondateur — Mega Royal Informatique</strong>
+          <span class="meta">• Castres • sept. 2022 → nov. 2023</span><br>
+          Activité indépendante : services informatiques & solutions digitales
+        </p>
+        <ul class="list">
+          <li>Création de sites web (WordPress, e-commerce, vitrine)</li>
+          <li>Design & branding (logos, flyers, cartes, maquettes UI)</li>
+          <li>SEO, stratégie digitale & gestion des réseaux sociaux</li>
+          <li>Maintenance informatique & support technique</li>
+          <li>Gestion de projet, relation clients, autonomie</li>
+        </ul>
+        <p class="small"><strong>Compétences acquises :</strong> gestion de projet A→Z · «CI/CD artisanal» (hébergement/optimisation) · UX/UI · pédagogie.</p>
+
+        <br>
+        <p><strong>Stage Concepteur-Designer UI — Perfect Consulting Web & Network</strong>
+          <span class="meta">• Bucarest • mai 2022 → juil. 2022</span><br>
+          Intégration WordPress, sites vitrines, support technique.
+        </p>
+
+        <p><strong>Stages Web & Design</strong>
+          <span class="meta">• Castres / Mazamet • 2021</span><br>
+          HTML/CSS, site Wix, design visuel, prototypage.
+        </p>
+
+        <p><strong>Gérant — EURL Mega Royal (restauration)</strong>
+          <span class="meta">• 2015 → 2019</span><br>
+          Gestion complète, leadership, polyvalence.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>🎓 Formation</h3>
+        <ul class="list">
+          <li><strong>TP Niveau 6 — Concepteur Designer UI</strong> • BGE Sud-Ouest (2021 → 2022)</li>
+          <li><strong>Master & Licence — Philosophie & Histoire des religions</strong> • Université de Bucarest (2002 → 2008)</li>
+        </ul>
+      </article>
+
+      <!-- Compétences techniques (4 volets) — déplacé ICI, en bas à droite -->
+      <article class="card">
+        <h3>🧠 Compétences techniques </h3>
+        <div class="skills4">
+          <div class="skill-box">
+            <h4>Dev & Web</h4>
+            <ul>
+              <li>HTML, CSS, JS, PHP</li>
+              <li>WordPress, e-commerce</li>
+              <li>SEO, marketing digital</li>
+            </ul>
+          </div>
+          <div class="skill-box">
+            <h4>Design & UX</h4>
+            <ul>
+              <li>Maquettes UI, webdesign</li>
+              <li>Logos, flyers, branding</li>
+              <li>Prototypage, animations web</li>
+            </ul>
+          </div>
+          <div class="skill-box">
+            <h4>Logiciels</h4>
+            <ul>
+              <li>Adobe XD, Photoshop, Illustrator, After Effects</li>
+              <li>Suite Adobe complète</li>
+              <li>Webflow (notions)</li>
+            </ul>
+          </div>
+          <div class="skill-box">
+            <h4>IT</h4>
+            <ul>
+              <li>Support & maintenance informatique</li>
+              <li>Diagnostic & dépannage</li>
+              <li>Installation systèmes</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+  </section>
+
+  <footer class="footer">
+    Dernière mise à jour : 2025-11-02 — Disponible en télétravail / alternance — Portfolio & projets sur GitHub
+  </footer>
+</main>
+</body>
+</html>
