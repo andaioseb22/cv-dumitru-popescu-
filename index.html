@@ -63,6 +63,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-
   .main{box-shadow:none;border:none;border-radius:0}
   .header{border-bottom:1px solid #ddd}
   a{color:#000;text-decoration:none;border-bottom:none}
+  .no-print{display:none !important;}
 }
 </style>
 </head>
@@ -70,9 +71,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-
 <main class="main">
 
   <!-- HEADER -->
-  <header class="header">
+    <header class="header">
+
     <img src="photo.png" alt="Portrait" class="photo">
     <div class="title">
+
       <h1>Dumitru-Ionut Popescu</h1>
       <p class="tag">AI & Automation Engineer (Candidat Mastère RNCP7) • Python • API • Agents • Automation</p>
       <p class="meta">
@@ -80,7 +83,21 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-
         ✉️ <a href="mailto:giovaninho22@yahoo.com">giovaninho22@yahoo.com</a>
       </p>
     </div>
+
   </header>
+<!-- Boutons Imprimer / Télécharger -->
+  
+  <div class="no-print" style="display:flex; gap:10px; margin:10px 0 15px 28px;">
+  <button id="downloadBtn" onclick="window.open('cv-dumitru-popescu.pdf')"
+    style="padding:10px 16px; background:#0A84FF; color:white; border:none; border-radius:6px; cursor:pointer; font-size:14px;">
+    📄 Télécharger PDF
+  </button>
+
+  <button onclick="printCVPDF()"
+    style="padding:10px 16px; background:#0A84FF; color:white; border:none; border-radius:6px; cursor:pointer; font-size:14px;">
+    🖨️ Imprimer le CV
+  </button>
+</div>
 
   <section class="grid">
 
@@ -270,5 +287,45 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-
     Dernière mise à jour : 2025-11-02 — Disponible en télétravail / alternance — Portfolio & projets sur GitHub
   </footer>
 </main>
+<script>
+window.onbeforeprint = () => {
+  // URL de ton PDF hébergé sur GitHub Pages
+  const pdfURL = "cv-dumitru-popescu.pdf"; 
+  window.location.href = pdfURL;
+};
+</script>
+<script>
+function printCVPDF() {
+  const pdfURL = 'cv-dumitru-popescu.pdf'; // doit être à la racine du repo
+
+  // crée (ou réutilise) un iframe caché pour lancer l'impression du PDF
+  let iframe = document.getElementById('pdfPrinter');
+  if (!iframe) {
+    iframe = document.createElement('iframe');
+    iframe.id = 'pdfPrinter';
+    iframe.style.position = 'fixed';
+    iframe.style.right = 0;
+    iframe.style.bottom = 0;
+    iframe.style.width = 0;
+    iframe.style.height = 0;
+    iframe.style.border = 0;
+    document.body.appendChild(iframe);
+  }
+
+  iframe.onload = function () {
+    // certaines visions PDF bloquent l'impression programmée : on tente, sinon fallback onglet
+    try {
+      iframe.contentWindow.focus();
+      iframe.contentWindow.print();
+    } catch (e) {
+      window.open(pdfURL, '_blank');
+    }
+  };
+
+  // paramètres pour réduire l'UI du viewer
+  iframe.src = pdfURL + '#toolbar=0&navpanes=0&scrollbar=0';
+}
+</script>
+
 </body>
 </html>
